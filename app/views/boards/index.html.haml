@@ -1,21 +1,21 @@
 .container 
   %h2 All Boards
   - @boards.each do |board|
-    = link_to board_path(board) do
-      .card
-        .card_top 
-          .card_title
-            = board.title
-          - if user_signed_in? && current_user.has_written?(board)
-            .dropdown
-              = image_tag 'Combined Shape.png'
-              .dropdown-content
-                =link_to 'Edit', edit_board_path(board)
-                =link_to 'Delete', board_path(board), data: {method: 'delete', confirm: 'Are you sure to delete this board?'}
-        .card_content
-          = board.content
-        .card_auther_image
-          = image_tag 'Oval.png', class: 'avatar-image'
+    /= link_to board_path(board) do 
+    .card
+      .card_top 
+        .card_title
+          = board.title
+        - if user_signed_in? && current_user.has_written?(board)
+          .dropdown
+            = image_tag 'Combined Shape.png'
+            .dropdown-content
+              =link_to 'Edit', edit_board_path(board)
+              =link_to 'Delete', board_path(board), data: {method: 'delete', confirm: 'Are you sure to delete this board?'}
+      .card_content
+        = board.content
+      .card_auther_image
+        = image_tag 'Oval.png', class: 'avatar-image'
   = link_to new_board_path do
     .float_btn
       %p +Add new board
