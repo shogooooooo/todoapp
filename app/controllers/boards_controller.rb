@@ -2,8 +2,6 @@
 
 class BoardsController < ApplicationController
    
-  
-  
   def index
     @boards = Board.all
   end
@@ -21,8 +19,5 @@ class BoardsController < ApplicationController
     board.destroy
     redirect_to root_path, notice: 'Successfully deleted'
   end
-
- 
-  
 end
 
