@@ -4,7 +4,7 @@
     .card
       .card_content
         .card_upper
-          = link_to board_path(board) do
+          = link_to board_tasks_path(board) do
             .card_title
               = board.title
           .dropdown
@@ -13,7 +13,7 @@
               .dropdown-content
                 =link_to 'Edit', edit_board_path(board)
                 =link_to 'Delete', board_path(board), data: {method: 'delete', confirm: 'Are you sure to delete this board?'}
-        = link_to board_path(board) do        
+        = link_to board_tasks_path(board) do       
           .card_detail
             = board.content
           .card_auther_image
