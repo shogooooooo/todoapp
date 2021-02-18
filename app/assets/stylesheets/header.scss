@@ -1,20 +1,33 @@
-.header_pageTitle{
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  left:30px;
-  top: 17px;
-  position: absolute;
-  width: 56px;
-  height: 25px;
-  color: #000000
+
+.header{
+
+  &_pageTitle{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    left:30px;
+    top: 17px;
+    position: absolute;
+    width: 56px;
+    height: 25px;
+    color: #000000
+  }
+  
+  &_avatar{
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 20px;
+  }
+
+  &_border{
+    color: #000000;
+    border: 1px solid #000000;
+    width: 100%;
+    top: 58px;
+    opacity: 0.1;
+    position: absolute;
+  }
 }
 
-.header_border{
-  color: #000000;
-  border: 1px solid #000000;
-  width: 100%;
-  top: 58px;
-  opacity: 0.1;
-  position: absolute;
-}
