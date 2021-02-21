@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
 class BoardsController < ApplicationController
-   
   def index
     @boards = Board.all
   end
 
-  def new 
+  def new
     @board = current_user.boards.build
   end
 
@@ -26,7 +25,7 @@ class BoardsController < ApplicationController
   def update
     @board = current_user.boards.find(params[:id])
     if @board.update(board_params)
-      redirect_to board_path(@board)
+      redirect_to root_path
     else
       render :edit
     end
@@ -39,8 +38,8 @@ class BoardsController < ApplicationController
   end
 
   private
+
   def board_params
     params.require(:board).permit(:title, :content)
   end
 end
-

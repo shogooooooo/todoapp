@@ -7,7 +7,7 @@
           = link_to board_tasks_path(board) do
             .card_title
               = board.title
-          .dropdown
+          .dropdown 
             - if user_signed_in? && current_user.has_written?(board)
               = image_tag 'Combined Shape.png', class: 'dropdown'
               .dropdown-content
@@ -20,6 +20,6 @@
           = image_tag 'Oval.png', class: 'avatar-image'
 
   = link_to new_board_path do
-    .float_btn
+    .board-float_btn
       %p +Add new board
 
