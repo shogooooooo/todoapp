@@ -1,6 +1,10 @@
 .container
   %h2 New card
   = form_with(model: @task ,url: board_tasks_path, method: 'post', local: true) do |f|
+    %div 
+      = f.label :eyecatch, 'Eyecatch'
+    %div 
+      = f.file_field :eyecatch, class: 'eyecatch'
     %div
       = f.label :title ,'Name'
     %div

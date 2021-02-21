@@ -1,0 +1,30 @@
+.task{
+  width:100%;
+  
+
+  &_topper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+
+    h2{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &_content{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 19px;
+    word-wrap: break-word;
+  }
+  &_comment{
+    font-size: 26px;
+    line-height: 36px;
+  }
+}

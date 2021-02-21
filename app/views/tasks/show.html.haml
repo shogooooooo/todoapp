@@ -1,1 +1,16 @@
-%p aaaa
+.container
+  .task_topper
+    %h2= @task.title
+    .dropdown
+      - if user_signed_in? && @board.has_been_written?(@task)
+        = image_tag 'Combined Shape.png', class: 'dropdown'
+        .dropdown-content
+          =link_to 'Edit', edit_board_task_path(@board,@task)
+          =link_to 'Delete', board_task_path(@board,@task), data: {method: 'delete', confirm: 'Are you sure to delete this board?'}
+  - if @task.eyecatch.attached?
+    .card_image_show
+      = image_tag @task.eyecatch
+  .task_content
+    = @task.content
+  .task_comment
+    %p Comment

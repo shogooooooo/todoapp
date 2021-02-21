@@ -4,6 +4,7 @@
 @import "card";
 @import "commons";
 @import "flash";
+@import "task";
 
 html {
   word-spacing: 1px;
@@ -37,7 +38,7 @@ a {
 }
 
 .container {
-  padding: 16px 16px;
+  padding: 16px 30px 24px;
   width: 100%;
   position: relative;
   top: 92px;

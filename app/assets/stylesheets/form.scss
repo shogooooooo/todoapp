@@ -20,6 +20,11 @@ select {
     color: #ffffff;
     font-size: 18px;
   }
+  &.eyecatch{
+    margin: 10px 0;
+    border: 1px solid  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 }
 .long-text{
   width: 100%;
