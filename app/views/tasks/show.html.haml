@@ -14,3 +14,12 @@
     = @task.content
   .task_comment
     %p Comment
+    -@comments.each do |comment|
+      .comment_detail
+        .comment_image
+          = image_tag 'Oval.png'
+        .comment_content
+          = comment.content
+    = link_to new_board_task_comment_path(@board, @task) do
+      .comment_float_btn
+        %p +Add new comment
