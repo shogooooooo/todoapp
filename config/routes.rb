@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root to: 'boards#index'
 
   resources :boards, only: %i[index new create edit update destory] do
-    resources :tasks
+    resources :tasks do
+      resources :comments, only: %i[new create]
+    end
   end
 end
